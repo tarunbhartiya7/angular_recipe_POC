@@ -26,3 +26,13 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Tips
+
+To remove the spec file used for testing while generating using cli
+    -npm g c recipes --spec false
+
+To create a component inside a folder simply specify the path
+ng g c recipes/recipe-list --spec false
+
+

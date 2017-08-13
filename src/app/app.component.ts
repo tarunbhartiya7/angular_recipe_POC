@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import { OnInit, Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'app works!';
+export class AppComponent implements OnInit{
+  arr = [];
+  loadedFeature = 'recipe';
+  constructor(){ }
+
+  ngOnInit(){
+  
+  }
+
+  onNavigate(feature: string){
+    this.loadedFeature = feature;
+  }
 }
