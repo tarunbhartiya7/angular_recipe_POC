@@ -1,11 +1,10 @@
 import { ShoppingListService } from './../shopping-list/shopping-list.service';
 import { Ingredient } from './../shared/model/ingredient.model';
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Recipe } from './../shared/model/recipe.model';
 
 @Injectable()
 export class RecipeService{
-    recipeSelected = new EventEmitter<Recipe>();
 
     /*By default its recipes array is public, but if you make it as private then you cannot access
     it from outside(you will have to access it using a method)*/
@@ -29,6 +28,10 @@ export class RecipeService{
       ];
 
     constructor(private shoppingListService: ShoppingListService){}
+
+    getRecipe(index: number){
+        return this.recipes[index];
+    }
 
     getRecipes(){
         //return this.recipes; //if u return like this then u return the direct reference
